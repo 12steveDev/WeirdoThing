@@ -1,6 +1,6 @@
 const $ = (elem, parent=document) => parent.getElementById(elem);
 const E = (elem) => document.createElement(elem);
-const ws = new WebSocket("ws://localhost:3000");
+const ws = new WebSocket(`${location.protocol === "https:" ? "wss" : "ws"}://${location.host}`);
 $("msg").addEventListener("keydown",(e)=>{
     if (e.key === "Enter"){
         sendMessage();
