@@ -84,7 +84,8 @@ wss.on("connection", (socket)=>{
         console.log("\x1b[31mCliente desconectado!");
     });
 })
-server.listen(3000, ()=>{
+const PORT = process.env.PORT || 3000
+server.listen(PORT, ()=>{
     console.clear();
-    console.log("\x1b[35m=== Servidor en http://localhost:3000 ===");
+    console.log("\x1b[35m=== Servidor iniciado we ===");
 });
